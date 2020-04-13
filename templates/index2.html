@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+</head>
+
+<body class = "body">
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">G</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Acceuil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Grady</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          À propos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Le projet</a>
+          <a class="dropdown-item" href="/about/documentation">Documentation</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Remerciements</a>
+        </div>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+</nav>
+    
+    <body>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type = "text/javascript" src = "../static/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        
+        <h3>{{ title }}</h3>
+        
+        {% for p in paragraph %}
+        <p>{{ p }}</p>
+        {% endfor %}
+        
+        
+        {% if pageType == 'about' %}
+        <p>Un truc qui ne doit s'afficher que sur la page documentation<p/>
+        {% endif %}
+
+        <canvas id="myChart" width="400" height="400"></canvas>
+
+    </body>
+    
+    
+
+    
+</body>
+
+
+</html>
